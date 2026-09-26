@@ -1,0 +1,39 @@
+# Tags web feed — dev notes
+
+## Current goal
+
+Create a clean foundation for the Tags web feed.
+
+## Branch
+
+`levi-web-foundation`
+
+## Build order
+
+1. Architecture and layout first
+2. Placeholder data and media until real assets are available
+
+## Out of scope (for now)
+
+- AI integration
+- Authentication
+- Database
+- Payment logic
+- Retailer APIs
+- Unnecessary npm packages
+
+## Feed UX
+
+- Vertical navigation
+- One outfit ≈ one viewport
+- Prefer reusable, small components
+
+## Stack
+
+- TypeScript
+- Tailwind CSS
+- Next.js App Router (existing setup)
+
+## Before opening a PR
+
+Run lint and build.

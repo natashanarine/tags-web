@@ -1,0 +1,40 @@
+# Tags — Web feed repository context
+
+Tags is an AI-powered virtual try-on shopping platform.
+
+The broader product includes a Chrome extension and a mobile-style discovery feed. **This repository focuses only on the responsive web feed.**
+
+## Feed experience
+
+- TikTok-style, vertically scrollable discovery feed
+- Each feed item is a new outfit shown on the user
+- One outfit should feel like roughly one viewport on mobile
+
+## Hackathon scope
+
+- Hardcoded clothing catalog (no real retailer ingestion or scraping)
+- Outfit try-on media may be pre-rendered with Decart Lucy VTON and bundled in the app
+- No authentication
+- No database
+- No sizing or fit prediction
+- Keep the implementation simple and demo-focused
+
+## Feed item (target shape)
+
+Each item should eventually include:
+
+- Store
+- Item title
+- Price
+- Media showing the outfit on the user
+- **Buy this look** action (eventually leading to a Visa checkout experience)
+
+## Design direction
+
+- Black and white
+- Minimal
+- No rounded corners
+- No gradients
+- Avoid decorative shadows
+- Strong spacing and typography
+- Mobile-first, responsive on desktop
