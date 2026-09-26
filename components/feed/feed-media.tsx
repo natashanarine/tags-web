@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { hasMediaPath } from "@/lib/outfit-media";
 import type { Outfit } from "@/types/outfit";
 import { MediaPlaceholder } from "@/components/feed/media-placeholder";
 
@@ -13,29 +14,38 @@ export function FeedMedia({
   priority?: boolean;
 }) {
   const [imageFailed, setImageFailed] = useState(false);
-  const hasVideo = Boolean(outfit.video);
-  const hasImage = Boolean(outfit.image) && !imageFailed;
+  const [videoFailed, setVideoFailed] = useState(false);
 
-  if (hasVideo) {
+  const imageSrc = hasMediaPath(outfit.image) ? outfit.image : null;
+  const videoSrc = hasMediaPath(outfit.video) ? outfit.video : null;
+  const showVideo = Boolean(videoSrc) && !videoFailed;
+  const showImage = Boolean(imageSrc) && !imageFailed;
+
+  if (showVideo) {
     return (
       <video
         className="h-full w-full object-cover object-center"
-        src={outfit.video ?? undefined}
-        poster={hasImage ? outfit.image : undefined}
+        src={videoSrc ?? undefined}
+        poster={showImage ? imageSrc ?? undefined : undefined}
         controls
         playsInline
         muted
+        onError={() => setVideoFailed(true)}
       />
     );
   }
 
-  if (!hasImage) {
+  if (videoFailed && !showImage) {
+    return <MediaPlaceholder title={outfit.title} />;
+  }
+
+  if (!showImage || !imageSrc) {
     return <MediaPlaceholder title={outfit.title} />;
   }
 
   return (
     <Image
-      src={outfit.image}
+      src={imageSrc}
       alt={outfit.title}
       fill
       unoptimized

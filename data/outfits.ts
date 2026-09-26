@@ -1,4 +1,5 @@
 import type { Outfit } from "@/types/outfit";
+import { outfitImagePath, outfitVideoPath } from "@/lib/outfit-media";
 
 export const outfits: Outfit[] = [
   {
@@ -7,8 +8,8 @@ export const outfits: Outfit[] = [
     title: "Black Oversized Tee",
     description: "Heavyweight cotton tee with a dropped shoulder and relaxed fit.",
     price: 4800,
-    image: "/mock/outfits/black-oversized-tee.svg",
-    video: null,
+    image: outfitImagePath("black-oversized-tee"),
+    video: outfitVideoPath("black-oversized-tee"),
     productUrl: "/mock/products/black-oversized-tee",
   },
   {
@@ -17,8 +18,8 @@ export const outfits: Outfit[] = [
     title: "Straight Leg Trousers",
     description: "Structured trouser with a clean straight leg and mid rise.",
     price: 9800,
-    image: "/mock/outfits/straight-leg-trousers.svg",
-    video: null,
+    image: outfitImagePath("straight-leg-trousers"),
+    video: outfitVideoPath("straight-leg-trousers"),
     productUrl: "/mock/products/straight-leg-trousers",
   },
   {
@@ -27,8 +28,8 @@ export const outfits: Outfit[] = [
     title: "Cropped Jacket",
     description: "Boxy cropped jacket in matte black with minimal hardware.",
     price: 14800,
-    image: "/mock/outfits/cropped-jacket.svg",
-    video: null,
+    image: outfitImagePath("cropped-jacket"),
+    video: outfitVideoPath("cropped-jacket"),
     productUrl: "/mock/products/cropped-jacket",
   },
   {
@@ -37,8 +38,8 @@ export const outfits: Outfit[] = [
     title: "Knit Sweater",
     description: "Soft rib knit with a classic crew neck for layering.",
     price: 8800,
-    image: "/mock/outfits/knit-sweater.svg",
-    video: null,
+    image: outfitImagePath("knit-sweater"),
+    video: outfitVideoPath("knit-sweater"),
     productUrl: "/mock/products/knit-sweater",
   },
   {
@@ -47,8 +48,8 @@ export const outfits: Outfit[] = [
     title: "Relaxed Denim",
     description: "Light-wash denim with a relaxed leg and vintage-inspired wash.",
     price: 11800,
-    image: "/mock/outfits/relaxed-denim.svg",
-    video: null,
+    image: outfitImagePath("relaxed-denim"),
+    video: outfitVideoPath("relaxed-denim"),
     productUrl: "/mock/products/relaxed-denim",
   },
 ];
