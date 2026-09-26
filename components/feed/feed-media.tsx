@@ -19,7 +19,7 @@ export function FeedMedia({
   if (hasVideo) {
     return (
       <video
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover object-center"
         src={outfit.video ?? undefined}
         poster={hasImage ? outfit.image : undefined}
         controls
@@ -40,8 +40,8 @@ export function FeedMedia({
       fill
       unoptimized
       priority={priority}
-      sizes="(max-width: 480px) 100vw, 480px"
-      className="object-cover"
+      sizes="(max-width: 767px) 100vw, (max-width: 1279px) 420px, 480px"
+      className="object-cover object-center md:object-[center_45%] xl:object-[center_40%]"
       onError={() => setImageFailed(true)}
     />
   );

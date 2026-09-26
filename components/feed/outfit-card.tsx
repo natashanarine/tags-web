@@ -10,7 +10,7 @@ export function OutfitCard({
   priorityMedia?: boolean;
 }) {
   return (
-    <article className="flex h-full w-full shrink-0 snap-start snap-always flex-col">
+    <article className="grid h-full w-full min-w-0 max-w-full shrink-0 snap-start snap-always grid-rows-[minmax(0,1fr)_auto] overflow-hidden">
       <MediaStage outfit={outfit} priority={priorityMedia} />
       <ProductInfo outfit={outfit} />
     </article>

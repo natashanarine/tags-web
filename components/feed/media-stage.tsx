@@ -9,7 +9,7 @@ export function MediaStage({
   priority?: boolean;
 }) {
   return (
-    <div className="relative min-h-0 flex-1 bg-neutral-100">
+    <div className="relative h-full min-h-0 min-w-0 overflow-hidden bg-neutral-100">
       <FeedMedia outfit={outfit} priority={priority} />
     </div>
   );
