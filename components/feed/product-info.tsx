@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { formatPrice } from "@/data/outfits";
 import type { Outfit } from "@/types/outfit";
 
@@ -18,12 +19,12 @@ export function ProductInfo({ outfit }: { outfit: Outfit }) {
           {formatPrice(outfit.price)}
         </p>
       </div>
-      <button
-        type="button"
-        className="w-full shrink-0 border border-black bg-black px-4 py-3.5 text-[10px] uppercase tracking-[0.35em] text-white sm:text-[11px] md:py-4"
+      <Link
+        href={`/checkout?outfit=${outfit.id}`}
+        className="inline-flex w-full shrink-0 items-center justify-center border border-black bg-black px-4 py-3.5 text-[10px] uppercase tracking-[0.35em] text-white sm:text-[11px] md:py-4"
       >
         Buy this look
-      </button>
+      </Link>
     </div>
   );
 }
