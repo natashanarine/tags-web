@@ -5,7 +5,7 @@ export function ModelSilhouette() {
       viewBox="0 0 240 520"
       role="img"
       aria-label="Model placeholder silhouette"
-      className="h-[min(70vh,540px)] w-auto max-w-[min(52vw,220px)] text-neutral-400"
+      className="h-[min(82vh,680px)] w-auto max-w-[min(72vw,300px)] translate-y-6 md:h-[min(74vh,620px)] md:max-w-[min(56vw,260px)] md:translate-y-4 text-neutral-400"
     >
       <g fill="none" stroke="currentColor" strokeWidth="2">
         <ellipse cx="120" cy="52" rx="34" ry="38" />

@@ -6,7 +6,7 @@ import { ModelSilhouette } from "@/components/feed/model-silhouette";
  */
 export function MediaStage() {
   return (
-    <div className="relative flex h-full min-h-0 w-full min-w-0 items-center justify-center overflow-hidden bg-neutral-50">
+    <div className="relative flex h-full min-h-0 w-full min-w-0 flex-1 items-center justify-center overflow-hidden pb-[min(22vh,11rem)] pt-6 md:pb-[min(20vh,10rem)] md:pt-8">
       <ModelSilhouette />
     </div>
   );
