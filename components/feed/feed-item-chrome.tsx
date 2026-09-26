@@ -1,6 +1,6 @@
 export function FeedItemChrome() {
   return (
-    <div className="feed-chrome pointer-events-auto relative z-10 flex items-center justify-between px-4 py-4 md:px-5">
+    <div className="feed-chrome pointer-events-auto absolute inset-x-0 top-0 z-30 flex items-start justify-between px-4 pt-[max(1rem,env(safe-area-inset-top))] md:px-5 md:pt-5">
       <button
         type="button"
         aria-label="Placeholder control"

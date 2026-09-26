@@ -5,7 +5,7 @@ export function MediaStage() {
   return (
     <div
       aria-hidden
-      className="relative min-h-0 w-full flex-1 pointer-events-none pb-[min(22vh,11rem)] pt-6 md:pb-[min(20vh,10rem)] md:pt-8"
+      className="relative min-h-0 w-full flex-1 pointer-events-none pb-[min(22vh,11rem)] md:pb-[min(20vh,10rem)]"
     />
   );
 }

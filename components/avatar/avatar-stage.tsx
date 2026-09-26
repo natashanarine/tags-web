@@ -2,7 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Suspense, memo } from "react";
+import { Suspense, memo, useCallback, useState } from "react";
 import {
   AVATAR_ORBIT_TARGET,
   AVATAR_POLAR_ANGLE,
@@ -15,6 +15,20 @@ type AvatarStageProps = {
 };
 
 function AvatarStageComponent({ className = "" }: AvatarStageProps) {
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handlePointerDown = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    event.currentTarget.setPointerCapture(event.pointerId);
+    setIsDragging(true);
+  }, []);
+
+  const handlePointerUp = useCallback((event: React.PointerEvent<HTMLDivElement>) => {
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+    setIsDragging(false);
+  }, []);
+
   const cameraDistance = 3.5;
   const cameraY =
     AVATAR_ORBIT_TARGET[1] +
@@ -24,8 +38,12 @@ function AvatarStageComponent({ className = "" }: AvatarStageProps) {
 
   return (
     <div
-      className={`h-full w-full cursor-grab touch-none active:cursor-grabbing ${className}`}
+      className={`h-full w-full touch-none ${isDragging ? "cursor-grabbing" : "cursor-grab"} ${className}`}
       aria-label="Drag horizontally to rotate the avatar"
+      onPointerDown={handlePointerDown}
+      onPointerUp={handlePointerUp}
+      onPointerLeave={handlePointerUp}
+      onPointerCancel={handlePointerUp}
     >
       <Canvas
         dpr={[1, 2]}
