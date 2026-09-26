@@ -1,13 +1,11 @@
-import { ModelSilhouette } from "@/components/feed/model-silhouette";
-
 /**
- * Primary try-on presentation surface.
- * TODO(media): Swap ModelSilhouette for bundled video / 3D try-on output.
+ * Layout spacer for the feed stage. The shared 3D avatar renders once behind the feed.
  */
 export function MediaStage() {
   return (
-    <div className="relative flex h-full min-h-0 w-full min-w-0 flex-1 items-center justify-center overflow-hidden pb-[min(22vh,11rem)] pt-6 md:pb-[min(20vh,10rem)] md:pt-8">
-      <ModelSilhouette />
-    </div>
+    <div
+      aria-hidden
+      className="relative min-h-0 w-full flex-1 pointer-events-none pb-[min(22vh,11rem)] pt-6 md:pb-[min(20vh,10rem)] md:pt-8"
+    />
   );
 }

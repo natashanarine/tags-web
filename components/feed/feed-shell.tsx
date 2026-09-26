@@ -28,7 +28,7 @@ export function FeedShell({ outfits, isLoading = false }: FeedShellProps) {
   return (
     <section
       aria-label="Outfit feed"
-      className="h-full w-full min-w-0 max-w-full snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="relative z-10 h-full w-full min-w-0 max-w-full snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
     >
       {outfits.map((outfit) => (
         <OutfitCard key={outfit.id} outfit={outfit} />

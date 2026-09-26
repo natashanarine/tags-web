@@ -3,7 +3,7 @@ import type { Outfit } from "@/types/outfit";
 
 export function ProductInfo({ outfit }: { outfit: Outfit }) {
   return (
-    <div className="absolute inset-x-0 bottom-0 z-20 flex w-full min-w-0 flex-col gap-5 bg-white/55 px-4 py-5 backdrop-blur-[6px] sm:px-5 md:px-6 md:py-6">
+    <div className="feed-product pointer-events-auto absolute inset-x-0 bottom-0 z-20 flex w-full min-w-0 flex-col gap-5 bg-white/55 px-4 py-5 backdrop-blur-[6px] sm:px-5 md:px-6 md:py-6">
       <p className="inline-flex w-fit border border-neutral-300 bg-white/80 px-2 py-1 text-[10px] uppercase tracking-[0.25em] text-neutral-600">
         {outfit.category}
       </p>
