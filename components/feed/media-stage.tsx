@@ -1,22 +1,22 @@
 import Image from "next/image";
-import type { OutfitMedia } from "@/types/outfit";
+import type { Outfit } from "@/types/outfit";
 
-export function MediaStage({ media }: { media: OutfitMedia }) {
+export function MediaStage({ outfit }: { outfit: Outfit }) {
   return (
     <div className="relative min-h-0 flex-1 bg-neutral-100">
-      {media.kind === "video" ? (
+      {outfit.video ? (
         <video
           className="h-full w-full object-cover"
-          src={media.src}
-          poster={media.posterSrc}
+          src={outfit.video}
+          poster={outfit.image}
           controls
           playsInline
           muted
         />
       ) : (
         <Image
-          src={media.src}
-          alt={media.alt}
+          src={outfit.image}
+          alt={outfit.title}
           fill
           unoptimized
           priority

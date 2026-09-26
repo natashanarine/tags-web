@@ -31,7 +31,7 @@ export default async function CheckoutPage({
               <p className="text-xs uppercase tracking-widest">{outfit.store}</p>
               <p className="text-lg">{outfit.title}</p>
               <p className="text-sm">
-                {formatPrice(outfit.priceCents, outfit.currency)}
+                {formatPrice(outfit.price)}
               </p>
             </div>
           ) : (

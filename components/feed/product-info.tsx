@@ -8,7 +8,8 @@ export function ProductInfo({ outfit }: { outfit: Outfit }) {
       <div className="space-y-1">
         <p className="text-xs uppercase tracking-widest">{outfit.store}</p>
         <h2 className="text-xl font-medium">{outfit.title}</h2>
-        <p className="text-sm">{formatPrice(outfit.priceCents, outfit.currency)}</p>
+        <p className="text-sm text-neutral-600">{outfit.description}</p>
+        <p className="text-sm">{formatPrice(outfit.price)}</p>
       </div>
       <Link
         href={`/checkout?outfit=${outfit.id}`}
