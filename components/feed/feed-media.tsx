@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { FeedMediaUnavailableState } from "@/components/feed/feed-media-unavailable-state";
 import { hasMediaPath } from "@/lib/outfit-media";
 import type { Outfit } from "@/types/outfit";
-import { MediaPlaceholder } from "@/components/feed/media-placeholder";
 
 export function FeedMedia({
   outfit,
@@ -36,11 +36,11 @@ export function FeedMedia({
   }
 
   if (videoFailed && !showImage) {
-    return <MediaPlaceholder title={outfit.title} />;
+    return <FeedMediaUnavailableState title={outfit.title} />;
   }
 
   if (!showImage || !imageSrc) {
-    return <MediaPlaceholder title={outfit.title} />;
+    return <FeedMediaUnavailableState title={outfit.title} />;
   }
 
   return (

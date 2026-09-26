@@ -1,12 +1,27 @@
 import type { Outfit } from "@/types/outfit";
+import { FeedEmptyState } from "@/components/feed/feed-empty-state";
+import { FeedLoadingState } from "@/components/feed/feed-loading-state";
 import { OutfitCard } from "@/components/feed/outfit-card";
 
-export function FeedShell({ outfits }: { outfits: Outfit[] }) {
+type FeedShellProps = {
+  outfits: Outfit[];
+  isLoading?: boolean;
+};
+
+export function FeedShell({ outfits, isLoading = false }: FeedShellProps) {
+  if (isLoading) {
+    return (
+      <div className="h-full w-full min-w-0" aria-busy="true" aria-label="Loading outfit feed">
+        <FeedLoadingState />
+      </div>
+    );
+  }
+
   if (outfits.length === 0) {
     return (
-      <p className="px-4 py-10 text-sm text-neutral-600 md:px-6 xl:px-8">
-        No outfits in the catalog yet.
-      </p>
+      <div className="h-full w-full min-w-0" aria-label="Empty outfit feed">
+        <FeedEmptyState />
+      </div>
     );
   }
 
