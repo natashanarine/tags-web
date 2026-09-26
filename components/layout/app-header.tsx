@@ -2,13 +2,20 @@ import Link from "next/link";
 
 export function AppHeader() {
   return (
-    <header className="flex items-center justify-between border-b border-black px-4 py-4">
-      <Link href="/shop" className="text-sm font-semibold uppercase tracking-[0.2em]">
+    <header className="flex shrink-0 items-center justify-between border-b border-black bg-white px-6 py-5">
+      <Link
+        href="/shop"
+        className="text-[11px] font-medium uppercase tracking-[0.35em] text-black"
+      >
         Tags
       </Link>
-      <nav aria-label="Primary" className="flex gap-6 text-xs uppercase tracking-widest">
-        <Link href="/shop">Feed</Link>
-        <Link href="/checkout">Bag</Link>
+      <nav aria-label="Primary">
+        <Link
+          href="/shop"
+          className="text-[11px] uppercase tracking-[0.35em] text-black"
+        >
+          Feed
+        </Link>
       </nav>
     </header>
   );

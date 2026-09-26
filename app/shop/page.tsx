@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ShopPage() {
   return (
-    <div className="min-h-dvh bg-white text-black">
-      <div className="mx-auto flex h-dvh w-full max-w-md flex-col border-x border-black">
+    <div className="h-dvh bg-white text-black">
+      <div className="mx-auto flex h-full w-full max-w-md flex-col border-x border-black bg-white md:max-w-lg">
         <AppHeader />
         <main className="min-h-0 flex-1">
           <FeedShell outfits={outfits} />
