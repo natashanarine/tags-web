@@ -1,16 +1,13 @@
-import type { Outfit } from "@/types/outfit";
-import { FeedMedia } from "@/components/feed/feed-media";
+import { ModelSilhouette } from "@/components/feed/model-silhouette";
 
-export function MediaStage({
-  outfit,
-  priority = false,
-}: {
-  outfit: Outfit;
-  priority?: boolean;
-}) {
+/**
+ * Primary try-on presentation surface.
+ * TODO(media): Swap ModelSilhouette for bundled video / 3D try-on output.
+ */
+export function MediaStage() {
   return (
-    <div className="relative h-full min-h-0 min-w-0 overflow-hidden bg-neutral-100">
-      <FeedMedia outfit={outfit} priority={priority} />
+    <div className="relative flex h-full min-h-0 w-full min-w-0 items-center justify-center overflow-hidden bg-neutral-50">
+      <ModelSilhouette />
     </div>
   );
 }

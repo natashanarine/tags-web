@@ -1,15 +1,17 @@
 export type Outfit = {
   id: string;
+  category: string;
   store: string;
   title: string;
   description: string;
-  /** Price in USD cents */
+  /** Numeric price for checkout calculations (placeholder catalog uses 0). */
   price: number;
-  /** Static image path (poster / fallback) */
+  /** Display-only price string for the feed UI. */
+  priceDisplay: string;
+  /** Static image path (poster / fallback); empty when using silhouette placeholder. */
   image: string;
   /** Try-on video path; null when not bundled yet */
   video: string | null;
-  /** Placeholder product link for demo */
   productUrl: string;
 };
 
