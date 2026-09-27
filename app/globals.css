@@ -30,3 +30,13 @@ textarea,
 select {
   font: inherit;
 }
+
+.feed-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.feed-scroll::-webkit-scrollbar {
+  display: none;
+}

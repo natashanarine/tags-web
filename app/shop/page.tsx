@@ -12,7 +12,7 @@ export default function ShopPage() {
     <div className="h-dvh w-full overflow-x-hidden bg-white text-black">
       <div className="mx-auto flex h-full w-full min-w-0 max-w-[100vw] justify-center px-0 md:px-10 lg:px-16 xl:px-20 2xl:px-28">
         <div className="flex h-full w-full min-w-0 max-w-[100vw] flex-col border-x border-black bg-neutral-50 sm:max-w-[390px] md:max-w-[390px] lg:max-w-[420px] xl:max-w-[440px] 2xl:max-w-[480px]">
-          <main className="relative min-h-0 min-w-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-y-contain snap-y snap-mandatory">
+          <main className="feed-scroll relative min-h-0 min-w-0 flex-1 overflow-x-hidden overflow-y-auto overscroll-y-contain snap-y snap-mandatory">
             <div className="pointer-events-auto absolute inset-x-0 bottom-[min(24vh,12rem)] top-0 z-[15] md:bottom-[min(22vh,11rem)]">
               <AvatarStage className="h-full w-full" />
             </div>
