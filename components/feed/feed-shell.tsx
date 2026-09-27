@@ -28,14 +28,10 @@ export function FeedShell({ outfits, isLoading = false }: FeedShellProps) {
   return (
     <section
       aria-label="Outfit feed"
-      className="h-full w-full min-w-0 max-w-full snap-y snap-mandatory overflow-x-hidden overflow-y-auto overscroll-y-contain [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="pointer-events-none relative z-20 w-full min-w-0 max-w-full"
     >
-      {outfits.map((outfit, index) => (
-        <OutfitCard
-          key={outfit.id}
-          outfit={outfit}
-          priorityMedia={index === 0}
-        />
+      {outfits.map((outfit) => (
+        <OutfitCard key={outfit.id} outfit={outfit} />
       ))}
     </section>
   );

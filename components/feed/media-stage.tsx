@@ -1,16 +1,11 @@
-import type { Outfit } from "@/types/outfit";
-import { FeedMedia } from "@/components/feed/feed-media";
-
-export function MediaStage({
-  outfit,
-  priority = false,
-}: {
-  outfit: Outfit;
-  priority?: boolean;
-}) {
+/**
+ * Layout spacer for the feed stage. The shared 3D avatar renders once behind the feed.
+ */
+export function MediaStage() {
   return (
-    <div className="relative h-full min-h-0 min-w-0 overflow-hidden bg-neutral-100">
-      <FeedMedia outfit={outfit} priority={priority} />
-    </div>
+    <div
+      aria-hidden
+      className="relative min-h-0 w-full flex-1 pointer-events-none pb-[min(22vh,11rem)] md:pb-[min(20vh,10rem)]"
+    />
   );
 }
